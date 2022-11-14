@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --titulo: 'Lora', serif;
+    --palabras: 'Poppins', sans-serif;
+    --bgSun_azulOscuro: #006a89;
+    --bgSun_azulClaro: #86beda;
+    --bgMoon_gris: #444;
+    --bgMoon_amarillo: #ffdf00;
+    --color_blanco: #fff;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    margin: 0;
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------|  HEADER  |--------------------------------------- */
+
+.hcont1{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 2.5rem;
+    background-color: var(--bgSun_azulClaro);
+    box-shadow: 2px 4px 10px #000;
+}
+
+.logo{
+    font-family: var(--titulo);
+    font-size: 2.5rem;
+    color: var(--color_blanco);
+}
+
+.logo span{
+    color: var(--bgSun_azulOscuro);
+}
+
+.logo:hover{
+    animation-name: moverLogo;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moverLogo {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-2rem);
+        -webkit-transform: translateY(-2rem);
+        -moz-transform: translateY(-2rem);
+        -ms-transform: translateY(-2rem);
+        -o-transform: translateY(-2rem);
+    }
+}
+
+.btnDarkMode,
+.btnMenu{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 0 .5rem;
+}
+
+.btnDarkMode:hover,
+.btnMenu:hover{
+    padding: 1.5rem;
+}
+
+.imgDarkMode,
+.imgMenu{
+    pointer-events: none;
+}
+
+.hcont2{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bgSun_azulClaro);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.btnHora,
+.btnAlarma,
+.btnCronometro{
+    padding: 1rem;
+    width: 15rem;
+    margin: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.btnHora:hover,
+.btnAlarma:hover,
+.btnCronometro:hover{
+    background-color: var(--bgSun_azulOscuro);
+    color: var(--color_blanco);
+}
+
+.btnImg{
+    width: 3.5rem;
+    pointer-events: none;
+}
+.btnParrafo{
+    margin: 0;
+    font-family: var(--titulo);
+    font-size: 1.5rem;
+    pointer-events: none;
+}
