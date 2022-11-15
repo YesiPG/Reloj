@@ -7,7 +7,7 @@
     --bgSun_azulClaro: #86beda;
     --bgMoon_gris: #555;
     --bgMoon_grisOscuro: #333;
-    --bgMoon_amarillo: #ffdf00;
+    --bgMoon_amarillo: #e5be01;
     --color_blanco: #fff;
 }
 
@@ -228,6 +228,15 @@ body{
 .temaBg2Oscuro{
     background-color: var(--bgMoon_grisOscuro);
 }
+.temaBgHover:hover{
+    background-color: var(--bgMoon_amarillo);
+}
+.temaBgAma{
+    background-color: var(--bgMoon_amarillo);
+}
 .temaColor{
     color: var(--bgMoon_amarillo);
+}
+.temaColor2{
+    color: var(--color_blanco);
 }
