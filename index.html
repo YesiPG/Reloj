@@ -83,6 +83,16 @@
         </section>
 
         <section class="alarma showSeccion">
+            <form class="formAlarma">
+                <label for="al_hora" data-darkMode3="">Hora:</label>
+                <input type="number" min="0" max="24" id="al_hora">
+                
+                <label for="al_min" data-darkMode3="">Minutos:</label>
+                <input type="number" min="0" max="59" id="al_min">
+
+                <input class="btnAl_reset" type="reset" value="Reset" data-darkMode4="" data-darkModeHover="">
+                <input class="btnAl_iniciar" type="submit" value="Iniciar" data-darkMode4="" data-darkModeHover="">
+            </form>
             
             <p class="contHParrafo" data-darkMode2="" data-darkMode3="" data-minusP="" data-plusP="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis dicta minima ratione quos aperiam cum temporibus nobis eum error necessitatibus optio quisquam nesciunt, voluptatem debitis ut pariatur ullam voluptates? <br>
@@ -105,5 +115,6 @@
     <script src="js/secciones.js"></script>
     <script src="js/configuracion.js"></script>
     <script src="js/hora.js"></script>
+    <script src="js/alarma.js"></script>
 </body>
 </html>
