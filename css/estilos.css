@@ -9,6 +9,8 @@
     --bgMoon_grisOscuro: #333;
     --bgMoon_amarillo: #e5be01;
     --color_blanco: #fff;
+    --fontSize_titulo: 9rem;
+    --fontSize_parrafo: 1.5rem;
 }
 
 *,*::after,*::before{
@@ -141,7 +143,7 @@ body{
 
 .bTitulo{
     font-family: var(--titulo);
-    font-size: 10rem;
+    font-size: var(--fontSize_titulo);
     text-align: center;
     color: var(--bgSun_azulOscuro);
 }
@@ -174,8 +176,7 @@ body{
 
 .btnMinus,
 .btnPlus,
-.btnFullScreen,
-.btnExitFullScreen{
+.btnFullScreen{
     border-radius: 50%;
     padding: 1rem;
     margin: 0 .5rem;
@@ -187,8 +188,7 @@ body{
 
 .btnMinus:hover,
 .btnPlus:hover,
-.btnFullScreen:hover,
-.btnExitFullScreen:hover{
+.btnFullScreen:hover{
     background-color: var(--bgSun_azulClaro);
 }
 
@@ -214,7 +214,7 @@ body{
     display: flex;
     justify-content: center;
     font-family: var(--palabras);
-    font-size: 8rem;
+    font-size: var(--fontSize_titulo);
     color: var(--bgSun_azulOscuro);
 }
 
@@ -224,7 +224,7 @@ body{
 
 .contHParrafo{
     font-family: var(--palabras);
-    font-size: 1.5rem;
+    font-size: var(--fontSize_parrafo);
     margin: 0 10rem;
     padding: 2rem;
     background-color: var(--bgSun_azulOscuro);
