@@ -19,6 +19,7 @@
 }
 
 html{
+    overflow-x: hidden;
     margin: 0;
     font-size: 10px;
 }
@@ -165,6 +166,12 @@ body{
     width: 2.5rem;
 }
 
+.configuracion{
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+}
+
 .btnMinus,
 .btnPlus,
 .btnFullScreen,
@@ -186,10 +193,20 @@ body{
 }
 
 
-.hora{
+.bienvenida,
+.hora,
+.alarma,
+.cronometro{
+    position: absolute;
+    left: 0;
+    right: 0;
     display: grid;
     grid-auto-flow: row;
     gap: 2em;
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 980;
 }
 
 .contHora,
@@ -220,6 +237,12 @@ body{
     position: absolute;
     pointer-events: none;
     opacity: 0;
+}
+
+.showSeccion{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .temaBgOscuro{
