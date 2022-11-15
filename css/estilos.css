@@ -5,7 +5,8 @@
     --palabras: 'Poppins', sans-serif;
     --bgSun_azulOscuro: #006a89;
     --bgSun_azulClaro: #86beda;
-    --bgMoon_gris: #444;
+    --bgMoon_gris: #555;
+    --bgMoon_grisOscuro: #333;
     --bgMoon_amarillo: #ffdf00;
     --color_blanco: #fff;
 }
@@ -83,10 +84,6 @@ body{
     opacity: 1;
 }
 
-.btnShow{
-    pointer-events: none;
-    opacity: 0;
-}
 
 .btnDarkMode:hover,
 .btnMenu:hover{
@@ -139,6 +136,15 @@ body{
     pointer-events: none;
 }
 
+/* ----------------------------| SECCION BIENVENIDA  |----------------------------------- */
+
+.bTitulo{
+    font-family: var(--titulo);
+    font-size: 10rem;
+    text-align: center;
+    color: var(--bgSun_azulOscuro);
+}
+
 /* ----------------------------| SECCION HORA  |----------------------------------- */
 
 .Main{
@@ -168,4 +174,60 @@ body{
     margin: 0 .5rem;
     background-color: var(--bgSun_azulOscuro);
     cursor: pointer;
+    pointer-events: unset;
+    opacity: 1;
+}
+
+.btnMinus:hover,
+.btnPlus:hover,
+.btnFullScreen:hover,
+.btnExitFullScreen:hover{
+    background-color: var(--bgSun_azulClaro);
+}
+
+
+.hora{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2em;
+}
+
+.contHora,
+.contHFecha{
+    display: flex;
+    justify-content: center;
+    font-family: var(--palabras);
+    font-size: 8rem;
+    color: var(--bgSun_azulOscuro);
+}
+
+.contHFecha{
+    font-size: 4rem;
+}
+
+.contHParrafo{
+    font-family: var(--palabras);
+    font-size: 1.5rem;
+    margin: 0 10rem;
+    padding: 2rem;
+    background-color: var(--bgSun_azulOscuro);
+    color: var(--color_blanco);
+}
+
+/* ------------------------------- |  SHOW  |----------------------------- */
+
+.btnShow{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.temaBgOscuro{
+    background-color: var(--bgMoon_gris);
+}
+.temaBg2Oscuro{
+    background-color: var(--bgMoon_grisOscuro);
+}
+.temaColor{
+    color: var(--bgMoon_amarillo);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-darkMode="">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body data-darkMode="">
     <header>
-        <div class="hcont1">
+        <div class="hcont1" data-darkMode2="">
             <h2 class="logo">Reloj<span>PerLa</span></h2>
             <div class="contDarkMenu">
                 <button class="btnDarkMode">
@@ -23,19 +23,19 @@
             </div>
         </div>
 
-        <div class="hcont2">
+        <div class="hcont2" data-darkMode2="">
             <nav class="navegador">
                 <button class="btnHora">
                     <img class="btnImg" src="images/hora.svg" alt="hora svg">
-                    <p class="btnParrafo">Hora</p>
+                    <p class="btnParrafo" data-darkMode3="">Hora</p>
                 </button>
                 <button class="btnAlarma">
                     <img class="btnImg" src="images/alarma.svg" alt="alarma svg">
-                    <p class="btnParrafo">Alarma</p>
+                    <p class="btnParrafo" data-darkMode3="">Alarma</p>
                 </button>
                 <button class="btnCronometro">
                     <img class="btnImg" src="images/cronometro.svg" alt="cronometro svg">
-                    <p class="btnParrafo">Cronometro</p>
+                    <p class="btnParrafo" data-darkMode3="">Cronometro</p>
                 </button>
             </nav>
         </div>
@@ -52,27 +52,39 @@
             <button class="btnFullScreen">
                 <img class="btnImg btnImg2" src="images/fullScreen.svg" alt="Full screen letras">
             </button>
-            <button class="btnExitFullScreen">
+            <button class="btnExitFullScreen btnShow">
                 <img class="btnImg btnImg2" src="images/exitFscreen.svg" alt="Exit full screen letras">
             </button>
         </section>
-        <section class="hora">
-            <div class="contHora">
-                <div class="h">00:</div>
-                <div class="min">00:</div>
-                <div class="seg">00</div>
-            </div>
-            <div class="contHFecha">
-                <div class="dia">00/</div>
-                <div class="mes">00/</div>
-                <div class="año">0000</div>
-            </div>
+        
+        <section class="bienvenida" data-darkMode3="">
+            <h1 class="bTitulo">BIENVENIDO</h1>
             <p class="contHParrafo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis dicta minima ratione quos aperiam cum temporibus nobis eum error necessitatibus optio quisquam nesciunt, voluptatem debitis ut pariatur ullam voluptates? <br>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum eaque officia, adipisci inventore sit iste excepturi nihil voluptates, repellat obcaecati nesciunt minus vero placeat maiores? Laboriosam ad et quas.
             </p>
         </section>
+
+        <section class="hora">
+            <div class="contHora" data-darkMode3="">
+                <div class="h">00:</div>
+                <div class="min">00:</div>
+                <div class="seg">00</div>
+            </div>
+            <div class="contHFecha" data-darkMode3="">
+                <div class="dia">00/</div>
+                <div class="mes">00/</div>
+                <div class="año">0000</div>
+            </div>
+            <p class="contHParrafo" data-darkMode3="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis dicta minima ratione quos aperiam cum temporibus nobis eum error necessitatibus optio quisquam nesciunt, voluptatem debitis ut pariatur ullam voluptates? <br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum eaque officia, adipisci inventore sit iste excepturi nihil voluptates, repellat obcaecati nesciunt minus vero placeat maiores? Laboriosam ad et quas.
+            </p>
+        </section>
+
     </main>
 
+    <!-- SCRIPTS -->
+    <script src="js/darkMode.js"></script>
 </body>
 </html>
