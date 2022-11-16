@@ -255,6 +255,7 @@ body{
     color: var(--bgSun_azulOscuro);
 }
 
+
 .btnAl_reset,
 .btnAl_iniciar{
     display: block;
@@ -266,6 +267,13 @@ body{
     padding: 1rem;
     background-color: rgba(0, 0, 0, .1);
     cursor: pointer;
+}
+
+.al_pHora,
+.al_pMin{
+    color: #f00;
+    font-family: var(--palabras);
+    font-size: 1.3rem;
 }
 
 .btnAl_reset:hover,

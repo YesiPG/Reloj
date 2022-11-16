@@ -85,10 +85,13 @@
         <section class="alarma showSeccion">
             <form class="formAlarma">
                 <label for="al_hora" data-darkMode3="">Hora:</label>
-                <input type="number" min="0" max="24" id="al_hora">
+                <input type="number" name="alHora" value="0" id="al_hora">
                 
                 <label for="al_min" data-darkMode3="">Minutos:</label>
-                <input type="number" min="0" max="59" id="al_min">
+                <input type="number" name="alMinutos" value="0" id="al_min">
+                
+                <p class="al_pHora"></p>
+                <p class="al_pMin"></p>
 
                 <input class="btnAl_reset" type="reset" value="Reset" data-darkMode4="" data-darkModeHover="">
                 <input class="btnAl_iniciar" type="submit" value="Iniciar" data-darkMode4="" data-darkModeHover="">
