@@ -172,6 +172,7 @@ body{
     position: absolute;
     top: 5rem;
     right: 3rem;
+    z-index: 985;
 }
 
 .btnMinus,
@@ -255,7 +256,6 @@ body{
     color: var(--bgSun_azulOscuro);
 }
 
-
 .btnAl_reset,
 .btnAl_iniciar{
     display: block;
@@ -282,6 +282,35 @@ body{
     color: var(--color_blanco);
 }
 
+/* ------------------------------|  SECCION CRONOMETRO  |--------------------------------- */
+
+.contCronometro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--palabras);
+    font-size: var(--fontSize_titulo);
+    color: var(--bgSun_azulOscuro);
+}
+
+.btnCrReset,
+.btnCrIniciar{
+    display: block;
+    margin: 1rem auto;
+    width: 10rem;
+    font-family: var(--palabras);
+    font-size: 1.7rem;
+    border-radius: .6rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.btnCrReset:hover,
+.btnCrIniciar:hover{
+    background-color: var(--bgSun_azulOscuro);
+    color: var(--color_blanco);
+}
 
 /* ------------------------------- |  SHOW  |----------------------------- */
 
