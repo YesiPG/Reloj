@@ -28,10 +28,6 @@
         return true;
     }
 
-    const soundAlarma = ()=>{
-
-    }
-
     const alarma = ()=>{
         const fecha = new Date();
         const audio = document.createElement("audio");
