@@ -366,6 +366,12 @@ body{
 }
 
 @media screen and (max-width: 600px){
+    .configuracion{
+        top: 0;
+        left: 0; 
+        right: 0;
+        text-align: center;
+    }
 
     .contCronometro,
     .contHora,
@@ -447,11 +453,6 @@ body{
 }
 
 @media screen and (max-width: 500px){
-    .configuracion{
-        left: 0; 
-        right: 0;
-        text-align: center;
-    }
     
     .contCronometro,
     .contHora,
