@@ -357,6 +357,12 @@ body{
     .contHParrafo{
         margin: 0 5rem;
     }
+
+    .contCronometro,
+    .contHora,
+    .bTitulo{
+        font-size: 8rem;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -364,11 +370,11 @@ body{
     .contCronometro,
     .contHora,
     .bTitulo{
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .contHParrafo{
-        margin: 0 4rem;
+        margin: 0 3rem;
     }
 
     .btnMinus,
@@ -379,7 +385,7 @@ body{
 
     .hcont2{
         top: 0;
-        left: 0;
+        left: -100rem;
         right: 0;
         bottom: 0;
         padding: 0;
@@ -387,10 +393,20 @@ body{
         align-items: center;
         opacity: 0;
         pointer-events: none;
+        transition: all 1s ease;
     }
     .hcont2Show{
+        left: 0;
         opacity: 1;
         pointer-events: unset;
+        transition: left 1s ease;
+        -webkit-transition: all 1s ease;
+        -moz-transition: left 1s ease;
+        -ms-transition: left 1s ease;
+        -o-transition: left 1s ease;
+}
+    .Main{
+        bottom: 0;
     }
     .btnSalir{
         position: absolute;
@@ -426,4 +442,40 @@ body{
         margin: 1rem 0;
     }
 
+}
+
+@media screen and (max-width: 500px){
+    .contCronometro,
+    .contHora,
+    .bTitulo{
+        font-size: 5.7rem;
+    }
+    .contHFecha{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contCronometro,
+    .contHora,
+    .bTitulo{
+        font-size: 5rem;
+    }
+    .contHFecha{
+        font-size: 3.7rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .contCronometro,
+    .contHora,
+    .bTitulo{
+        font-size: 4.2rem;
+    }
+    .contHFecha{
+        font-size: 3.3rem;
+    }
+    .contHParrafo{
+        margin: 0 2rem;
+    }
 }

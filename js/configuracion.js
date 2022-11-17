@@ -1,7 +1,7 @@
 (function(){
     "use strict"
 
-    const d = document;
+    const d = document, w = window;
     const dismTitulo = d.querySelectorAll("[data-minusT]");
     const dismParrafo = d.querySelectorAll("[data-minusP]");
     const incTitulo = d.querySelectorAll("[data-plusT]");
@@ -10,13 +10,60 @@
     const imgScreen = d.querySelector(".full");
     
     const disminuirLetra = ()=>{
-        dismTitulo.forEach(e => e.style.fontSize = "8rem");
-        dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+
+        if(w.screen.width > 800){
+            dismTitulo.forEach(e => e.style.fontSize = "8rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
+
+        else if(w.screen.width > 600 && w.screen.width <= 800){
+            dismTitulo.forEach(e => e.style.fontSize = "7rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
+        else if(w.screen.width > 500 && w.screen.width <= 600){
+            dismTitulo.forEach(e => e.style.fontSize = "6rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
+        else if(w.screen.width > 400 && w.screen.width <= 500){
+            dismTitulo.forEach(e => e.style.fontSize = "5.3rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
+        else if(w.screen.width > 350 && w.screen.width <= 400){
+            dismTitulo.forEach(e => e.style.fontSize = "4.6rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
+        else{
+            dismTitulo.forEach(e => e.style.fontSize = "4rem");
+            dismParrafo.forEach(e => e.style.fontSize = "1.3rem");
+        }
     }
 
     const incrementarLetra = ()=>{
-        incTitulo.forEach(e => e.style.fontSize = "10rem");
-        incParrafo.forEach(e => e.style.fontSize = "1.6rem");
+
+        if(w.screen.width > 800){
+            incTitulo.forEach(e => e.style.fontSize = "10rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.6rem");
+        }
+        else if(w.screen.width > 600 && w.screen.width <= 800){
+            incTitulo.forEach(e => e.style.fontSize = "9rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.6rem");
+        }
+        else if(w.screen.width > 500 && w.screen.width <= 600){
+            incTitulo.forEach(e => e.style.fontSize = "7.5rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.5rem");
+        }
+        else if(w.screen.width > 400 && w.screen.width <= 500){
+            incTitulo.forEach(e => e.style.fontSize = "6.2rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.5rem");
+        }
+        else if(w.screen.width > 350 && w.screen.width <= 400){
+            incTitulo.forEach(e => e.style.fontSize = "5.3rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.5rem");
+        }
+        else{
+            incTitulo.forEach(e => e.style.fontSize = "4.4rem");
+            incParrafo.forEach(e => e.style.fontSize = "1.5rem");
+        }
     }
 
     const openFullscreen = ()=>{
