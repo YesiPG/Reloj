@@ -5,6 +5,7 @@
     const ls = localStorage;
 
     const imgDarkMode = d.querySelector(".imgDarkMode");
+    const imgMenu = d.querySelector(".imgMenu");
     const pintar = d.querySelectorAll("[data-darkMode]");
     const pintar2 = d.querySelectorAll("[data-darkMode2]");
     const colorLetras = d.querySelectorAll("[data-darkMode3]");
@@ -22,6 +23,10 @@
         colorLetras2.forEach(element => element.classList.add("temaColor2"));
         bgConfg.forEach(element => element.classList.add("temaBgAma"));
         bgHover.forEach(element => element.classList.add("temaBgHover"));
+
+        imgMenu.removeAttribute("src");
+        imgMenu.setAttribute("src","images/menu2.svg")
+
         imgDarkMode.removeAttribute("src");
         imgDarkMode.setAttribute("src","images/sun.svg")
         
@@ -36,8 +41,12 @@
         bgConfg.forEach(element => element.classList.remove("temaBgAma"));
         colorLetras2.forEach(element => element.classList.remove("temaColor2"));
         bgHover.forEach(element => element.classList.remove("temaBgHover"));
+
+        imgMenu.removeAttribute("src");
+        imgMenu.setAttribute("src","images/menu.svg");
+
         imgDarkMode.removeAttribute("src");
-        imgDarkMode.setAttribute("src","images/moon.svg")
+        imgDarkMode.setAttribute("src","images/moon.svg");
         
         
         ls.setItem("tema","claro");

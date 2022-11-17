@@ -344,3 +344,86 @@ body{
 .temaColor2{
     color: var(--color_blanco);
 }
+
+/* ----------------------------------|  RESPONSIVE  |-------------------------------------- */
+
+@media screen and (max-width: 800px){
+
+    .bienvenida,
+    .hora,
+    .alarma{
+        gap: 5em;
+    }
+    .contHParrafo{
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .contCronometro,
+    .contHora,
+    .bTitulo{
+        font-size: 8rem;
+    }
+
+    .contHParrafo{
+        margin: 0 4rem;
+    }
+
+    .btnMinus,
+    .btnPlus,
+    .btnFullScreen{
+        padding: .5rem;
+    }
+
+    .hcont2{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .hcont2Show{
+        opacity: 1;
+        pointer-events: unset;
+    }
+    .btnSalir{
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        border-radius: 50%;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, .1);  
+        cursor: pointer;
+        z-index: 999;
+    }
+    .btnSalir:hover{
+        padding: 1.5rem;
+    }
+    .imgSalir{
+        width: 4rem;
+        pointer-events: none;
+    }
+    .contDarkMenu{
+        margin: 0 5rem;
+    }
+    .btnShow{
+        opacity: 1;
+        pointer-events: unset;
+    }
+    .navegador{
+        width: 100%;
+    }
+    .btnHora,
+    .btnAlarma,
+    .btnCronometro{
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+}
