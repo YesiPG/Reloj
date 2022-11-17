@@ -389,6 +389,15 @@ body{
         padding: .5rem;
     }
 
+    .formAlarma label{
+        display: block;
+    }
+
+    .btnAl_reset,
+    .btnAl_iniciar{
+        display: inline-block;
+    }
+
     .hcont2{
         top: 0;
         left: -100rem;
