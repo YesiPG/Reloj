@@ -352,7 +352,7 @@ body{
     .bienvenida,
     .hora,
     .alarma{
-        gap: 5em;
+        gap: 2em;
     }
     .contHParrafo{
         margin: 0 5rem;
@@ -395,6 +395,7 @@ body{
         pointer-events: none;
         transition: all 1s ease;
     }
+    
     .hcont2Show{
         left: 0;
         opacity: 1;
@@ -406,6 +407,7 @@ body{
         -o-transition: left 1s ease;
 }
     .Main{
+        top: 12rem;
         bottom: 0;
     }
     .btnSalir{
@@ -445,6 +447,12 @@ body{
 }
 
 @media screen and (max-width: 500px){
+    .configuracion{
+        left: 0; 
+        right: 0;
+        text-align: center;
+    }
+    
     .contCronometro,
     .contHora,
     .bTitulo{
