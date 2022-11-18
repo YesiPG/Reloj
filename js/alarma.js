@@ -2,27 +2,31 @@
     "use strict"
 
     const d = document;
-    const alHora = parseInt(d.getElementById("al_hora").value);
-    const alMinutos = parseInt(d.getElementById("al_min").value);
+    const alHora = d.getElementById("al_hora");
+    const alMinutos = d.getElementById("al_min");
     const parrafoHora = d.querySelector(".al_pHora");
     const parrafoMin = d.querySelector(".al_pMin");
 
     const validarHora = ()=>{
-        
-        if(typeof alHora !== "number" ) return parrafoHora.innerHTML = `el dato ${alHora} no es un numero`;
-        if(alHora > 24 ) return parrafoHora.innerHTML = `la Hora no puede ser mayor a 24`;
-        if(Math.sign(alHora) === -1)return parrafoHora.innerHTML = `el dato ${alHora} no puede ser un numero negativo`;
+        let h = Number(alHora.value);
+        console.log(h);
+        if(typeof h !== "number" ) return parrafoHora.innerHTML = `el dato ${h} no es un numero`;
+        if(h > 24 ) return parrafoHora.innerHTML = `la Hora no puede ser mayor a 24`;
+        if(Math.sign(h) === -1)return parrafoHora.innerHTML = `el dato ${h} no puede ser un numero negativo`;
+        if(Number.isInteger(h) === false) return parrafoHora.innerHTML = `la hora no debe ser un numero flotante`;
     
         parrafoHora.innerHTML = `<span style="color:#0f0">La hora se ingreso correctamente</span>`;
         return true;
     }
 
     const validarMinutos = ()=>{
+        let m = Number(alMinutos.value);
+        console.log(m)
 
-        if(alMinutos === undefined ) return parrafoMin.innerHTML = `El Minuto esta vacio`;
-        if(typeof alMinutos !== "number" ) return  parrafoMin.innerHTML = `El dato ${alMinutos} no es un numero`;
-        if(alMinutos > 60 ) return parrafoMin.innerHTML = `Los minutos no pueden ser mayor a 60`;
-        if(Math.sign(alMinutos) === -1)return parrafoMin.innerHTML = `el dato ${alMinutos} no puede ser un numero negativo`;
+        if(typeof m !== "number" ) return  parrafoMin.innerHTML = `El dato ${m} no es un numero`;
+        if(m > 60 ) return parrafoMin.innerHTML = `Los minutos no pueden ser mayor a 60`;
+        if(Math.sign(m) === -1)return parrafoMin.innerHTML = `el dato ${m} no puede ser un numero negativo`;
+        if(Number.isInteger(m) === false) return parrafoMin.innerHTML = `los minutos no deben ser numeros flotante`;
 
         parrafoMin.innerHTML = `<span style="color:#0f0">Los minutos se ingresaron correctamente</span>`;
         return true;
@@ -32,7 +36,7 @@
         const fecha = new Date();
         const audio = document.createElement("audio");
         
-        if(fecha.getHours() === alHora && fecha.getMinutes() === alMinutos){
+        if(fecha.getHours() === Number(alHora.value) && fecha.getMinutes() === Number(alMinutos.value)){
             audio.preload = "auto";
             audio.src = "./images/alarma.mp3";
             audio.play();
@@ -45,7 +49,6 @@
 
         if(e.target.matches(".btnAl_iniciar")){
             e.preventDefault();
-            validarHora();
             if(validarMinutos()===true && validarHora() === true){
                 alarma();
                 setInterval(alarma,1000);
