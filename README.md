@@ -1,4 +1,4 @@
-# RELOJ PerLa
+# RelojPerLa
 
 En este proyecto practicare el objeto Date() con js, en el cual el usuario podrá ver la hora y fecha actual, poner una alarma que sonara cuando el tiempo ingresado se cumpla y por ultimo un cronometro.
 
@@ -16,4 +16,4 @@ _Nota: esta pagina es responsiva._
 ---
 
 **_link para ver la pagina:_**
-[RelojPerLa](yesipg.github.io/Reloj)
+[RelojPerLa](https://yesipg.github.io/Reloj/)
