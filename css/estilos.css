@@ -43,7 +43,7 @@ body{
     padding: 1rem 2.5rem;
     background-color: var(--bgSun_azulClaro);
     box-shadow: 2px 4px 10px #000;
-    z-index: 999;
+    z-index: 997;
 }
 
 .logo{
@@ -111,7 +111,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: stretch;
-    z-index: 998;
+    z-index: 999;
 }
 
 .btnHora,
