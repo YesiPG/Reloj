@@ -11,9 +11,9 @@
         let h = Number(alHora.value);
         console.log(h);
         if(typeof h !== "number" ) return parrafoHora.innerHTML = `el dato ${h} no es un numero`;
-        if(h > 24 ) return parrafoHora.innerHTML = `la Hora no puede ser mayor a 24`;
+        if(h > 23 ) return parrafoHora.innerHTML = `la Hora no puede ser mayor a 23`;
         if(Math.sign(h) === -1)return parrafoHora.innerHTML = `el dato ${h} no puede ser un numero negativo`;
-        if(Number.isInteger(h) === false) return parrafoHora.innerHTML = `la hora no debe ser un numero flotante`;
+        if(Number.isInteger(h) !== true) return parrafoHora.innerHTML = `la hora no debe ser un numero flotante`;
     
         parrafoHora.innerHTML = `<span style="color:#0f0">La hora se ingreso correctamente</span>`;
         return true;
@@ -24,9 +24,9 @@
         console.log(m)
 
         if(typeof m !== "number" ) return  parrafoMin.innerHTML = `El dato ${m} no es un numero`;
-        if(m > 60 ) return parrafoMin.innerHTML = `Los minutos no pueden ser mayor a 60`;
+        if(m > 59 ) return parrafoMin.innerHTML = `Los minutos no pueden ser mayor a 59`;
         if(Math.sign(m) === -1)return parrafoMin.innerHTML = `el dato ${m} no puede ser un numero negativo`;
-        if(Number.isInteger(m) === false) return parrafoMin.innerHTML = `los minutos no deben ser numeros flotante`;
+        if(Number.isInteger(m) !== true) return parrafoMin.innerHTML = `los minutos no deben ser numeros flotante`;
 
         parrafoMin.innerHTML = `<span style="color:#0f0">Los minutos se ingresaron correctamente</span>`;
         return true;
